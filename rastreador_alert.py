@@ -29,7 +29,7 @@ def buscar_cotacao_euro():
         mensagem = client.messages.create(
             from_='whatsapp:+14155238886',
             body=texto_alerta,
-            to='whatsapp:+559281274551'
+            to=os.getenv('MEU_CELULAR')
         )
         print(f"Alerta enviado silenciosamente! ID da mensagem: {mensagem.sid}")
 

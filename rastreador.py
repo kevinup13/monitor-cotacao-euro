@@ -1,8 +1,11 @@
+import os
 import time
 
 import pywhatkit as kit
 import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 
 def buscar_cotacao_euro():
     url = "https://economia.awesomeapi.com.br/json/last/EUR-BRL"
@@ -21,7 +24,7 @@ def buscar_cotacao_euro():
     if cotacao < 5.90:
         texto_alerta = f"ALERTA: O Euro baixou! Preço atual: R$ {cotacao:.2f}. Hora de comprar!"
         print("Condição atingida! Preparando envio de WhatsApp...")
-        numero_destino = "+5592981274551"
+        numero_destino = os.getenv('MEU_CELULAR')
         kit.sendwhatmsg_instantly(numero_destino, texto_alerta, wait_time=60, tab_close=True)
         print("Alerta enviado com sucesso!")
     else:
