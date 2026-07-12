@@ -1,4 +1,4 @@
-# 📈 Rastreador de Cotação do Euro com Alertas Automatizados no WhatsApp
+# 📈 Monitor de Cotação do Euro com Alertas Automatizados no WhatsApp
 
 Este projeto é uma automação em Python desenvolvida para monitorar a cotação do Euro em tempo real e disparar notificações automáticas para o WhatsApp sempre que a moeda atingir um valor financeiro estratégico definido pelo usuário.
 
@@ -38,14 +38,14 @@ pip install -r requirements.txt
 
 ## Como executar
 
-para o arquivo rastreador_alert.py
+para o arquivo monitor-cotacao-api.py
 
 ```bash
-python rastreador_alert.py
+python monitor-cotacao-api.py
 ```
 
-para o arquivo rastreador.py
+para o arquivo monitor-cotacao-rpa.py
 
 ```bash
-python rastreador.py
+python monitor-cotacao-rpa.py
 ```
